@@ -112,6 +112,9 @@ function obtenerResto(x, y) {
 }
 
 function esPar(num) {
+  if ((num) %2 === 0)
+      {return true};
+  {return false};
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
@@ -119,6 +122,10 @@ function esPar(num) {
 }
 
 function esImpar(num) {
+  if ((num) %2 === 0)
+      {return false};
+   
+{return true};
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
@@ -162,12 +169,17 @@ function redondearHaciaArriba(num) {
 }
 
 function numeroRandom() {
+  {return Math.random()};
+
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  
 }
-
 function esPositivo(numero) {
+  if (numero >0 ) 
+      {return 'esPositivo'}
+    else if (numero <0 ) 
+      {return 'esNegativo'}
+{return false};
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
@@ -176,12 +188,14 @@ function esPositivo(numero) {
 }
 
 function agregarSimboloExclamacion(str) {
+  {return (str) + '!'};
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
 }
 
 function combinarNombres(nombre, apellido) {
+    return (nombre) +'  '+ (apellido)
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
@@ -189,6 +203,8 @@ function combinarNombres(nombre, apellido) {
 }
 
 function obtenerSaludo(nombre) {
+    {return 'hola '+ (nombre) + '!'}
+
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
