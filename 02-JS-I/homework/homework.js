@@ -59,7 +59,7 @@ function multiplica(x, y) {
 
 
 function divide(x, y) {
-  return x % y;
+  return x / y;
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
 }
