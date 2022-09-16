@@ -100,6 +100,7 @@ function estaEnRango(numero) {
 }
 
 function esEntero(numero) {
+  return numero % 1 === 0; 
   // Devuelve "true" si "numero" es un entero (int/integer)
   // Ejemplo: 0.8 -> false
   // Ejemplo: 1 -> true
@@ -130,14 +131,13 @@ function operadoresLogicos(num1, num2, num3) {
   if (num1 < 0 || num2 < 0 || num3 < 0)
       {return 'Hay negativos'}
     else if (num1 === 0 || num2 === 0 || num3 === 0)
-      {return'Error'}
-    else if (num1 > num2 && num1 > num3 && num1 > 0)
+      {return 'Error'}
+    else if (num1 >0 && num1 > num2 && num1 > num3)
       {return 'Número 1 es mayor y positivo'}
-    else (num3 > num2 && num3 > num1 , num3++)
-      {return num3}
-    {return false};
-  
-  
+    else if (num3 > num1 && num3 > num2)
+      {return num3 +1;}
+    else {return false;}
+   
   //La función recibe tres números distintos. 
   //Si num1 es mayor a num2 y a num3 y además es positivo, retornar ---> "Número 1 es mayor y positivo"
   //Si alguno de los tres números es negativo, retornar ---> "Hay negativos"
@@ -188,9 +188,10 @@ function tablaDelSeis(){
 }
 
 function tieneTresDigitos(numero){
-  if (numero.isInteger) {return true}
-    else if  (numero.length === 3) {return true};
-    {return false};
+ if (numero > 99 && numero < 1000 && numero % 1 === 0)
+      {return true;}
+    return false;
+
 
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
