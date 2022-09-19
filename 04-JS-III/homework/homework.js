@@ -98,10 +98,18 @@ function agregarNumeros(numeros) {
 
 
 function promedioResultadosTest(resultadosTest) {
+  var promedio = 0
+  for(let i = 0 ; i < resultadosTest.length; i++)
+  promedio = promedio + resultadosTest[i];
+
+
+  {return promedio / resultadosTest.length};
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
 }
+
+
 
 
 function numeroMasGrande(numeros) {
@@ -119,6 +127,12 @@ function numeroMasGrande(numeros) {
 
 
 function multiplicarArgumentos() {
+  if (arguments.length < 1) return 0
+  var sumnum = 1
+  for(let i = 0 ; i < arguments.length; i ++)
+   sumnum = sumnum * arguments[i];
+  return sumnum;
+  
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
@@ -126,6 +140,12 @@ function multiplicarArgumentos() {
 
 
 function cuentoElementos(arreglo){
+  var mayoresA18 = 0;
+  for (let i = 0 ; i < arreglo.length ; i ++)
+    if ( arreglo[i] > 18){
+      mayoresA18 ++ ;
+  }  
+  return mayoresA18;
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
 
@@ -133,6 +153,24 @@ function cuentoElementos(arreglo){
 
 
 function diaDeLaSemana(numeroDeDia) {
+  switch(numeroDeDia){
+    case 1:
+      return 'Es fin de semana';
+    case 2:
+      return 'Es dia Laboral';
+    case 3: 
+      return 'Es dia Laboral';
+    case 4: 
+      return 'Es dia Laboral';
+    case 5: 
+      return 'Es dia Laboral';
+    case 6: 
+      return 'Es dia Laboral';
+    case 7: 
+      return 'Es fin de semana';
+    default:
+      return 'el numero que ingreso no es un dia de la semana';
+  }
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
@@ -142,6 +180,8 @@ function diaDeLaSemana(numeroDeDia) {
 
 
 function empiezaConNueve(n) {
+   return (n >= 9);
+
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
@@ -150,6 +190,15 @@ function empiezaConNueve(n) {
 
 
 function todosIguales(arreglo) {
+  var igual = 0
+  for (let i = 0; i < arreglo.length ; i++)
+   igual = arreglo[i];
+   if (igual  === arreglo[i] -1 )
+   {return true};
+
+   
+   
+ 
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
