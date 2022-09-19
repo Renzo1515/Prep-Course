@@ -190,11 +190,12 @@ function empiezaConNueve(n) {
 
 
 function todosIguales(arreglo) {
-  var igual = 0
-  for (let i = 0; i < arreglo.length ; i++)
-   igual = arreglo[i];
-   if (igual  === arreglo[i] -1 )
-   {return true};
+  
+  for (let i = 0; i < arreglo.length - 1 ; i++){
+   if (arreglo[i] === arreglo[i + 1])
+   return true}
+   return false;
+   
 
    
    
@@ -207,6 +208,14 @@ function todosIguales(arreglo) {
 
 
 function mesesDelAño(array) {
+  var nuevoArray = []
+  for ( let i = 0; i < array.length ; i ++){
+    if (array[i] === 'Enero' ||array[i] === 'Marzo' ||array[i] === 'Noviembre'){
+      nuevoArray.push(array[i]);
+    } 
+  }
+    if (nuevoArray.length < 3)return "No se encontraron los meses pedidos";
+    else return nuevoArray 
   //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
@@ -215,6 +224,17 @@ function mesesDelAño(array) {
 
 
 function mayorACien(array) {
+  var arrayDe100 = []
+  {
+    if (array < 0 && array > 200)return false};
+  for (let i = 0 ; i < array.length; i ++){
+    if (array[i] > 100){
+      arrayDe100.push(array[i]);
+    }
+  }
+    return arrayDe100;
+
+  
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
@@ -222,6 +242,10 @@ function mayorACien(array) {
 
 
 function breakStatement(numero) {
+
+  //for(let i = 0; i < numero.length; i ++)
+
+
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array. 
   //Devolver el array
