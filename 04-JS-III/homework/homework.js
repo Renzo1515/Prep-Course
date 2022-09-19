@@ -242,9 +242,16 @@ function mayorACien(array) {
 
 
 function breakStatement(numero) {
-
-  //for(let i = 0; i < numero.length; i ++)
-
+  var nArray = [];
+  var cuenta = numero;
+    for (i = 0; i < 10 ; i ++){
+        cuenta = cuenta + 2;
+        if (cuenta === i)break;
+        else nArray.push(cuenta);
+    }
+    
+    if ( i < 10) return "Se interrumpió la ejecución";
+      else return nArray;
 
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array. 
@@ -257,6 +264,14 @@ function breakStatement(numero) {
 
 
 function continueStatement(numero) {
+  var nValor = [];
+  var cuenta = numero;
+    for (i = 0; i < 10 ; i ++){
+      if ( i === 5) continue
+      else cuenta += 2
+      nValor.push(cuenta);
+    }
+    return nValor;
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array.    
   //Devolver el array
